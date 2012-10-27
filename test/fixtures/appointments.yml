@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: MyString
+  appointment_time: 2012-10-25 12:12:25
+
+two:
+  user_id: MyString
+  appointment_time: 2012-10-25 12:12:25
