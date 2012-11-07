@@ -5,8 +5,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
+  has_many :businesses
+
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :uid, :provider, :username, :name
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :uid, :provider, :username, :name, :user_type
   # attr_accessible :title, :body
 
   def self.from_omniauth(auth)

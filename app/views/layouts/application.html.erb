@@ -9,6 +9,10 @@
 <body>
 	<p class="notice"><%= notice %></p>
 	       <p class="alert"><%= alert %></p>
+	<ul>
+      <li><%= link_to "Appointments", appointments_path %>
+      <li><%= link_to "New Appointment", new_appointment_path %></li>
+	</ul>
 
 <%= yield %>
 

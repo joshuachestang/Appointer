@@ -1,4 +1,10 @@
 Appointer::Application.routes.draw do
+  get("/dashboard", {:controller => "Dashboards", :action => "dashboard" })
+
+  resources :products
+
+  resources :businesses
+
   devise_for :users, :controllers => { :registrations => "registrations", omniauth_callbacks: "omniauth_callbacks" }
   resources :users
 
