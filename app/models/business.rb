@@ -3,5 +3,7 @@ class Business < ActiveRecord::Base
 
   belongs_to :user
 
+  has_one :calendar
+
   has_many :products
 end

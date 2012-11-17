@@ -1,4 +1,5 @@
 class BusinessesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /businesses
   # GET /businesses.json
   def index

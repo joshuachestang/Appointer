@@ -16,6 +16,12 @@ class User < ActiveRecord::Base
         user.provider = auth.provider
         user.uid = auth.uid
         user.username = auth.info.nickname
+        user.email = auth.info.email
+        user.name = auth.info.name
+        user.first_name = auth.info.first_name
+        user.last_name = auth.info.last_name
+        user.location = auth.info.location
+        user.facebook_image = auth.info.image
       end
     end
 

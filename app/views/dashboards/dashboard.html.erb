@@ -1,1 +1,6 @@
-<%= @your_page %>
+
+<% if current_user.user_type == "business" %>
+  <%= render 'business_owner' %>
+<% else %>
+  <%= render 'customer' %>
+<% end %>

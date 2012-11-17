@@ -1,4 +1,5 @@
 class AppointmentsController < ApplicationController
+  before_filter :aunthenticate_user!
   # GET /appointments
   # GET /appointments.json
   def index
