@@ -1,6 +1,13 @@
-<p id="notice"><%= notice %></p>
+
+
+<h2>Things To Do:</h2>
 <ul>
-<li><%= link_to "Add Product", new_product_path(@business) %></li>
+  <li>Event type creation</li>
+  <li>Users should only be able to select times available</li>
+  
+</ul>
+<ul>
+<li><%= link_to "Add Product", new_business_product_path(@business) %></li>
 </ul>
 <p>
   <b>User:</b>
@@ -19,4 +26,11 @@
 
 
 <%= link_to 'Edit', edit_business_path(@business) %> |
-<%= link_to 'Back', businesses_path %>
+<%= link_to 'Back', businesses_path %> |
+<%= link_to 'New Event', new_business_event_path(@business) %> |
+<%= link_to 'Gallery', business_gallery_images_path(@business) %> |
+<% if current_user.id = @business.user_id %>
+  <%= link_to 'Add New Image', new_business_gallery_image_path(@business) %>
+<% end %>
+
+<%= raw(event_calendar) %>

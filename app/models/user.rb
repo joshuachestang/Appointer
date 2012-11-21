@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  validates :email, :presence => true
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -6,6 +7,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
   has_many :businesses
+
+  has_many :events
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :uid, :provider, :username, :name, :user_type

@@ -4,8 +4,10 @@
   <%= devise_error_messages! %>
 
   <div><%= f.label :user_type, "Account Type" %><br />
-     <%= f.radio_button :user_type, :input => "business" %>
-     <%= f.radio_button :user_type, :input => "customer" %>
+     <%= f.radio_button :user_type, 'customer', :checked => true %> 
+    <%= label :user_type_customer, 'customer' %>
+    <%= f.radio_button :user_type, 'business' %>
+    <%= label :user_type_business, 'business' %>
   </div> 
 
   <div><%= f.label :email %><br />

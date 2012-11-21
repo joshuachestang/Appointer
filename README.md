@@ -24,3 +24,4 @@ Business Stories:
 6. As a business owner, I want to manually add customer appointments to my schedule
 7. As a business owner, I want to show my customers a list of my services with prices
 8. As a business owner, I want to receive an email when someone makes an appointment
+9. As a business owner, I want to show my customers a gallery of the past services I've done.

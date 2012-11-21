@@ -11,15 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121114152125) do
-
-  create_table "appointments", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "calendar_id"
-    t.datetime "appointment_time"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-  end
+ActiveRecord::Schema.define(:version => 20121121062742) do
 
   create_table "businesses", :force => true do |t|
     t.integer  "user_id"
@@ -29,16 +21,31 @@ ActiveRecord::Schema.define(:version => 20121114152125) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "calendars", :force => true do |t|
-    t.string   "business_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "dashboards", :force => true do |t|
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "events", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "business_id"
+    t.string   "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "gallery_images", :force => true do |t|
+    t.integer  "business_id"
+    t.string   "caption"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "products", :force => true do |t|

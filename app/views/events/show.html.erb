@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @event.user_id %>
+</p>
+
+<p>
+  <b>Business:</b>
+  <%= @event.business_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @event.name %>
+</p>
+
+<p>
+  <b>Start at:</b>
+  <%= @event.start_at %>
+</p>
+
+<p>
+  <b>End at:</b>
+  <%= @event.end_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_business_event_path(@event) %> |
+<%= link_to 'Back', :back %>

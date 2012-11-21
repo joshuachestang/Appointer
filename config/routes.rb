@@ -1,14 +1,21 @@
 Appointer::Application.routes.draw do
+  
+
+
+  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+
   get("/dashboard", {:controller => "Dashboards", :action => "dashboard" })
 
-  resources :products
+  
 
-  resources :businesses
+  resources :businesses do
+    resources :events
+    resources :products
+    resources :gallery_images
+  end
 
   devise_for :users, :controllers => { :registrations => "registrations", omniauth_callbacks: "omniauth_callbacks" }
   resources :users
-
-  resources :appointments
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

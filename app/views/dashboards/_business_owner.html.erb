@@ -8,5 +8,10 @@
      --><li>Link to Product Store/Add/Edit/Destroy Products</li>
      --><li>Edit Calendar</li>
      --><li>Create a way to send emails to customers about promotions.</li>
+
+     <%= link_to 'Create Business', new_business_path %>
+     <% @current_user_businesses.each do |business| %>
+       <%= link_to "#{business.name}", business_path(business.id) %>
+     <% end %>
 </ul>
 

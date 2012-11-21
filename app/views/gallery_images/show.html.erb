@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Business:</b>
+  <%= @gallery_image.business_id %>
+</p>
+
+<p>
+  <b>Caption:</b>
+  <%= @gallery_image.caption %>
+</p>
+
+
+<%= link_to 'Edit', edit_business_gallery_image_path(@gallery_image) %> |
+<%= link_to 'Back', :back %>

@@ -12,8 +12,8 @@
 
     <% if user_signed_in? %>
 	<ul>
-      <li><%= link_to "Appointments", appointments_path %>
-      <li><%= link_to "New Appointment", new_appointment_path %></li>
+      <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+      <li>Things to do: Validations for all models</li>
 	</ul>
     <% end %>
 <%= yield %>

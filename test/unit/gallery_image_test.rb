@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AppointmentTest < ActiveSupport::TestCase
+class GalleryImageTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
