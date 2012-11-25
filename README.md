@@ -25,3 +25,29 @@ Business Stories:
 7. As a business owner, I want to show my customers a list of my services with prices
 8. As a business owner, I want to receive an email when someone makes an appointment
 9. As a business owner, I want to show my customers a gallery of the past services I've done.
+
+
+Notes:
+Scheduling events
+
+A barber/hair salon offers many different services
+
+event -> has a type
+
+if event_type = haircut
+  set the end at time to 30 minutes later from the start time
+
+if event_type = lining
+  set the end at time to 15 minutes later from the start time
+
+if event_type = taper
+....
+
+business has many event types
+
+event type attributes:
+title
+price
+average time
+business_id
+

@@ -11,4 +11,6 @@ class Business < ActiveRecord::Base
   has_many :products
 
   has_many :gallery_images
+
+  has_many :event_types
 end
