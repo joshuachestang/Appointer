@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @appointment_slot.user_id %>
+</p>
+
+<p>
+  <b>Business:</b>
+  <%= @appointment_slot.business_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @appointment_slot.name %>
+</p>
+
+<p>
+  <b>Start at:</b>
+  <%= @appointment_slot.start_at %>
+</p>
+
+<p>
+  <b>End at:</b>
+  <%= @appointment_slot.end_at %>
+</p>
+
+<%= @appointment_type.title %>
+
+
+<%= link_to 'Edit', edit_business_appointment_slot_path(@appointment) %> |
+<%= link_to 'Back', :back %>

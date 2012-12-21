@@ -36,7 +36,6 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :user_type
       t.string :uid
       t.string :provider
-      t.string :username
       t.string :facebook_image
       t.string :location
       t.string :first_name

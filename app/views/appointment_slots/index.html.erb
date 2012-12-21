@@ -1,0 +1,31 @@
+<h1>Listing Appointments</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Business</th>
+    <th>Name</th>
+    <th>Start at</th>
+    <th>End at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @appointment_slots.each do |appointment| %>
+  <tr>
+    <td><%= appointment.user_id %></td>
+    <td><%= appointment.business_id %></td>
+    <td><%= appointment.name %></td>
+    <td><%= appointment.start_at %></td>
+    <td><%= appointment.end_at %></td>
+    <td><%= link_to 'Show', appointment %></td>
+    <td><%= link_to 'Edit', edit_appointment_slot_path(appointment) %></td>
+    <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New appointment', new_business_appointment_slot_path %>

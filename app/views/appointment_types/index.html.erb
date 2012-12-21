@@ -1,0 +1,27 @@
+<h1>Listing Appointment Types</h1>
+
+<table>
+  <tr>
+    <th>Business</th>
+    <th>Title</th>
+    <th>Duration</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @appointment_types.each do |appointment_type| %>
+  <tr>
+    <td><%= appointment_type.title %></td>
+    <td><%= appointment_type.business_id %></td>
+    <td><%= appointment_type.duration %></td>
+    <td><%= link_to 'Show', business_appointment_type_path(@business, appointment_type) %></td>
+    <td><%= link_to 'Edit', edit_business_appointment_type_path(@business, appointment_type) %></td>
+    <td><%= link_to 'Destroy', business_appointment_type_path(@business, appointment_type), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New appointment Type', new_business_appointment_type_path %>
+<%= link_to 'Back', :back %>

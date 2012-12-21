@@ -1,9 +1,9 @@
-class CreateEvents < ActiveRecord::Migration
+class CreateAppointmentSlots < ActiveRecord::Migration
   def change
-    create_table :events do |t|
+    create_table :appointment_slots do |t|
       t.integer :user_id
       t.integer :business_id
-      t.integer :event_type_id
+      t.integer :appointment_type_id
       t.string :name
       t.datetime :start_at
       t.datetime :end_at

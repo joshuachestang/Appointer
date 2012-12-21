@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   has_many :events
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :uid, :provider, :username, :name, :user_type
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :uid, :provider, :name, :user_type
   # attr_accessible :title, :body
 
   def self.from_omniauth(auth)

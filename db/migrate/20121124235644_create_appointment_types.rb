@@ -1,6 +1,6 @@
-class CreateEventTypes < ActiveRecord::Migration
+class CreateAppointmentTypes < ActiveRecord::Migration
   def change
-    create_table :event_types do |t|
+    create_table :appointment_types do |t|
       t.string :title
       t.integer :business_id
       t.integer :duration

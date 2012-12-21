@@ -27,12 +27,12 @@
 
 <%= link_to 'Edit', edit_business_path(@business) %> |
 <%= link_to 'Back', businesses_path %> |
-<%= link_to 'New Event', new_business_event_path(@business) %> |
+<%= link_to 'New Appointment', new_business_appointment_slot_path(@business) %> |
 <%= link_to 'Gallery', business_gallery_images_path(@business) %> |
-<%= link_to 'Types of Appointments', business_event_types_path(@business) %> |
+<%= link_to 'Types of Appointments', business_appointment_types_path(@business) %> |
 <% if current_user.id = @business.user_id %>
   <%= link_to 'Add New Image', new_business_gallery_image_path(@business) %> |
-  <%= link_to 'Add Appointment Type', new_business_event_type_path(@business) %>
+  <%= link_to 'Add Appointment Type', new_business_appointment_type_path(@business) %>
 <% end %>
 
-<%= raw(event_calendar) %>
+

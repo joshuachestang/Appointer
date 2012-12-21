@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @appointment_type.title %>
+</p>
+
+<p>
+  <b>Business:</b>
+  <%= @appointment_type.business_id %>
+</p>
+
+<p>
+  <b>Duration:</b>
+  <%= @appointment_type.duration %>
+</p>
+
+
+<%= link_to 'Edit', edit_business_appointment_type_path(@appointment_type) %> |
+<%= link_to 'Back', appointment_types_path %>

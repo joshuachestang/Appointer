@@ -1,17 +1,17 @@
 Appointer::Application.routes.draw do
   
 
-  match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
+  #match '/calendar(/:year(/:month))' => 'calendar#index', :as => :calendar, :constraints => {:year => /\d{4}/, :month => /\d{1,2}/}
 
   get("/dashboard", {:controller => "Dashboards", :action => "dashboard" })
 
   
 
   resources :businesses do
-    resources :events
+    resources :appointment_slots
     resources :products
     resources :gallery_images
-    resources :event_types
+    resources :appointment_types
   end
 
   devise_for :users, :controllers => { :registrations => "registrations", omniauth_callbacks: "omniauth_callbacks" }

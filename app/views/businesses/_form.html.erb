@@ -20,6 +20,15 @@
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </div>
+  <div class="field">
+    <%= f.label :open_time %><br />
+    <%= f.time_select :open_time, :ampm => true %>
+  </div>
+  <div class="field">
+    <%= f.label :close_time %><br />
+    <%= f.time_select :close_time, :ampm => true %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

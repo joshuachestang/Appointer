@@ -13,10 +13,31 @@
 
 ActiveRecord::Schema.define(:version => 20121124235644) do
 
+  create_table "appointment_slots", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "business_id"
+    t.integer  "appointment_type_id"
+    t.string   "name"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
+
+  create_table "appointment_types", :force => true do |t|
+    t.string   "title"
+    t.integer  "business_id"
+    t.integer  "duration"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "businesses", :force => true do |t|
     t.integer  "user_id"
     t.string   "name"
     t.string   "description"
+    t.datetime "open_time"
+    t.datetime "close_time"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -25,25 +46,6 @@ ActiveRecord::Schema.define(:version => 20121124235644) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "event_types", :force => true do |t|
-    t.string   "title"
-    t.integer  "business_id"
-    t.integer  "duration"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  create_table "events", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "business_id"
-    t.integer  "event_type_id"
-    t.string   "name"
-    t.datetime "start_at"
-    t.datetime "end_at"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
   end
 
   create_table "gallery_images", :force => true do |t|
@@ -84,7 +86,6 @@ ActiveRecord::Schema.define(:version => 20121124235644) do
     t.string   "user_type"
     t.string   "uid"
     t.string   "provider"
-    t.string   "username"
     t.string   "facebook_image"
     t.string   "location"
     t.string   "first_name"

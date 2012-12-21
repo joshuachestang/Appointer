@@ -4,6 +4,8 @@ class CreateBusinesses < ActiveRecord::Migration
       t.integer :user_id
       t.string :name
       t.string :description
+      t.datetime :open_time
+      t.datetime :close_time
 
       t.timestamps
     end

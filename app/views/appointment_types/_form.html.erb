@@ -1,10 +1,10 @@
-<%= form_for([@business, @event_type]) do |f| %>
-  <% if @event_type.errors.any? %>
+<%= form_for([@business, @appointment_type]) do |f| %>
+  <% if @appointment_type.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@event_type.errors.count, "error") %> prohibited this event_type from being saved:</h2>
+      <h2><%= pluralize(@appointment_type.errors.count, "error") %> prohibited this appointment_type from being saved:</h2>
 
       <ul>
-      <% @event_type.errors.full_messages.each do |msg| %>
+      <% @appointment_type.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

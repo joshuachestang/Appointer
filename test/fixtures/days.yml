@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  business_id: 1
+  day_of_week: MyString
+  starting_time: 2012-12-14 17:50:16
+  ending_time: 2012-12-14 17:50:16
+
+two:
+  business_id: 1
+  day_of_week: MyString
+  starting_time: 2012-12-14 17:50:16
+  ending_time: 2012-12-14 17:50:16

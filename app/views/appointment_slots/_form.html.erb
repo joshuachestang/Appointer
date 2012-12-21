@@ -1,10 +1,10 @@
-<%= form_for ([@business, @event]) do |f| %>
-  <% if @event.errors.any? %>
+<%= form_for ([@business, @appointment_slot]) do |f| %>
+  <% if @appointment_slot.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+      <h2><%= pluralize(@appointment_slot.errors.count, "error") %> prohibited this event from being saved:</h2>
 
       <ul>
-      <% @event.errors.full_messages.each do |msg| %>
+      <% @appointment_slot.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -23,8 +23,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :event_type %><br />
-    <%= f.collection_select :event_type_id, @business.event_types.all, :id, :title %>
+    <%= f.label :appointment_type %><br />
+    <%= f.collection_select :appointment_type_id, @business.appointment_types.all, :id, :title %>
   </div>
   <div class="actions">
     <%= f.submit %>

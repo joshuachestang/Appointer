@@ -15,12 +15,9 @@ class BusinessesController < ApplicationController
   # GET /businesses/1.json
   def show
     @business = Business.find(params[:id])
-    @event = @business.events.build(params[:event])
+    @appointment_slot = @business.appointment_slots.build(params[:event])
     @gallery_image = @business.gallery_images.build(params[:gallery_image])
-    @month = (params[:month] || (Time.zone || Time).now.month).to_i
-    @year = (params[:year] || (Time.zone || Time).now.year).to_i
-    @shown_month = Date.civil(@year, @month)
-    @event_strips = @business.events.event_strips_for_month(@shown_month)
+    
 
     respond_to do |format|
       format.html # show.html.erb
